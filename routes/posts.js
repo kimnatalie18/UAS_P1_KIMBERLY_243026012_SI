@@ -26,19 +26,16 @@ router.get('/', function (req,res){
 
 //ini untuk menambahkan row/isi dari database
 router.post('/store',[
-    body('judul').notEmpty(),
+    
     body('genre').notEmpty(),
-    body('sutradara').notEmpty(),
-    body('tahun_rilis').notEmpty(),
-    body('pengarang').notEmpty(),
-    body('durasi').notEmpty(),
-    body('tokoh').notEmpty(),
-    body('peran').notEmpty(),
-    body('watak').notEmpty(),
-    body('negara').notEmpty(),
+    body('judul').notEmpty(),
+    body('pemeran').notEmpty(),
     body('produser').notEmpty(),
-    body('bahasa').notEmpty(),
-    body('perusahaan_produksi').notEmpty(),
+    body('director').notEmpty(),
+    body('penulis').notEmpty(),
+    body('tanggalrilis').notEmpty(),
+    body('production').notEmpty(),
+    
 
 
 
@@ -52,19 +49,16 @@ router.post('/store',[
 
     //definisi from data
     let formData ={
-        judul: req.body.judul,
+        
         genre: req.body.genre,
-        sutradara: req.body.sutradara,
-        tahun_rilis: req.body.tahun_rilis,
-        pengarang: req.body.pengarang,
-        durasi: req.body.durasi,
-        tokoh: req.body.tokoh,
-        peran: req.body.peran,
-        watak: req.body.watak,
-        negara: req.body.negara,
+        judul: req.body.judul,
+        pemeran: req.body.pemeran,
         produser: req.body.produser,
-        bahasa: req.body.bahasa,
-        perusahaan_produksi: req.body.perusahaan_produksi,
+        director: req.body.director,
+        penulis: req.body.penulis,
+        tanggalrilis: req.body.tanggalrilis,
+        production: req.body.production,
+        
 
     }
 
@@ -117,19 +111,14 @@ router.get('/:id', function(req,res){
 // update / edit data
 
 router.patch('/update/:id',[
-    body('judul').notEmpty(),
     body('genre').notEmpty(),
-    body('sutradara').notEmpty(),
-    body('tahun_rilis').notEmpty(),
-    body('pengarang').notEmpty(),
-    body('durasi').notEmpty(),
-    body('tokoh').notEmpty(),
-    body('peran').notEmpty(),
-    body('watak').notEmpty(),
-    body('negara').notEmpty(),
+    body('judul').notEmpty(),
+    body('pemeran').notEmpty(),
     body('produser').notEmpty(),
-    body('bahasa').notEmpty(),
-    body('perusahaan_produksi').notEmpty(),
+    body('director').notEmpty(),
+    body('penulis').notEmpty(),
+    body('tanggalrilis').notEmpty(),
+    body('production').notEmpty(),
 
 
 ],(req,res)=>{
@@ -143,19 +132,14 @@ router.patch('/update/:id',[
     let id = req.params.id
 
     let  formData={
-        judul: req.body.judul,
         genre: req.body.genre,
-        sutradara: req.body.sutradara, 
-        tahun_rilis: req.body.tahun_rilis,
-        pengarang: req.body.pengarang,
-        durasi: req.body.durasi,
-        tokoh: req.body.tokoh,
-        peran: req.body.peran,
-        watak: req.body.watak,
-        negara: req.body.negara,
+        judul: req.body.judul,
+        pemeran: req.body.pemeran,
         produser: req.body.produser,
-        bahasa: req.body.bahasa,
-        perusahaan_produksi: req.body.perusahaan_produksi,
+        director: req.body.director,
+        penulis: req.body.penulis,
+        tanggalrilis: req.body.tanggalrilis,
+        production: req.body.production,
 
     }
 
